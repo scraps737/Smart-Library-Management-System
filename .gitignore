@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+.npm/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# build output
+client/dist/
+build/
+
+# local database + logs
+.data/
+*.log
+npm-debug.log*
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# extracted Google Stitch source (kept out of the app bundle)
+stitch_source/

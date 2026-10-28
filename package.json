@@ -1,0 +1,24 @@
+{
+  "name": "athenaeum-smart-digital-library",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Athenaeum Smart Digital Library — full-stack library management application",
+  "type": "module",
+  "scripts": {
+    "postinstall": "npm --prefix client install --include=dev && npm --prefix server install",
+    "install:all": "npm install --include=dev",
+    "start": "node scripts/start.mjs",
+    "dev": "node scripts/start.mjs",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "serve": "npm run build && NODE_ENV=production node server/src/index.js",
+    "seed": "NODE_ENV=development npm --prefix server run seed",
+    "reset": "NODE_ENV=development npm --prefix server run seed -- --force",
+    "test": "npm --prefix server test",
+    "lint": "npm --prefix client run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

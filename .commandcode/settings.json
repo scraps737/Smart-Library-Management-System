@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(find . -maxdepth 3 -iname \"*.zip\" 2>/dev/null; echo \"---\"; ls -la ~/Downloads 2>/dev/null | head -30)",
+      "Shell(unzip:*)",
+      "Shell(mkdir:*)",
+      "Shell(which node npm mongod mongosh 2>/dev/null; echo \"--- versions ---\"; node -v; npm -v)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
